@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <img src="assets/maps.jpg" class="ion-padding" class="page-map " >
+  <br><br><br>
+
+  <form action="">
+    <ion-item>
+      <ion-label>Ingresar ruta</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  </form>
+
+  <ion-card>
+    <ion-item >
+      <ion-icon class="wifi" slot="start" name="cash"></ion-icon>
+      <ion-label>$5000</ion-label>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    </ion-item>
+<br>
+    <ion-item >
+      <ion-icon class="walk" slot="start" name="card"></ion-icon>
+      <ion-label>*** 3975</ion-label>
+      <ion-icon name="ellipse-outline" slot="end"></ion-icon>
+    </ion-item>
+ <br>
+    <ion-item >
+      <ion-icon class="warning" slot="start" name="hand-left"></ion-icon>
+      <ion-label>Pago en efectivo</ion-label>
+      <ion-icon name="ellipse-outline" slot="end"></ion-icon>
+    </ion-item>
+  </ion-card>
+<br>
+  <ion-button  color="dark" expand="full" routerLink="/viajecliente" >
+    Realizar viaje
+  </ion-button>
+
+</ion-content>

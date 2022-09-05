@@ -1,0 +1,58 @@
+import { Component, OnInit } from '@angular/core';
+import{
+  FormGroup,
+  FormControl,
+  Validators,
+  FormBuilder
+}from '@angular/forms';
+import { AlertController, MenuController } from '@ionic/angular';
+
+@Component({
+  selector: 'app-registrocliente',
+  templateUrl: './registrocliente.page.html',
+  styleUrls: ['./registrocliente.page.scss'],
+})
+export class RegistroclientePage implements OnInit {
+
+  formularioRegistroCliente: FormGroup;
+
+  constructor(public fb: FormBuilder,public alertController:AlertController,private menuController: MenuController) {
+    this.formularioRegistroCliente = this.fb.group({
+      'nombre': new FormControl("", Validators.required),
+      'password': new FormControl("", Validators.required),
+      'confirmacionPassword': new FormControl("", Validators.required),
+      'carrera': new FormControl("",Validators.required)
+    });
+   }
+
+  ngOnInit() {
+  }
+
+  mostrarMenu(){
+    this.menuController.open('first');
+  }
+
+  async guardar(){
+    var f = this.formularioRegistroCliente.value;
+
+    if(this.formularioRegistroCliente.invalid){
+      const alert = await this.alertController.create({
+        header:'Datos incompletos',
+        message: 'Tienes que llenar todos los campos',
+        buttons: ['Aceptar'],
+      });
+
+      await alert.present();
+      return;
+    }
+
+    var usuarioCliente = {
+      nombre: f.nombre,
+      password: f.password,
+      carrera:f.carrera,
+    }
+
+    localStorage.setItem('usuarioCliente', JSON.stringify(usuarioCliente));
+  }
+
+}

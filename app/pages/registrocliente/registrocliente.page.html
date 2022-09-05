@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="titulo" mode="ios">Registro Cliente</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form  [formGroup] = "formularioRegistroCliente" (Keyup.enter)="guardar()">
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input formControlName="nombre"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">contraseña</ion-label>
+          <ion-input formControlName="password" type="password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Confirmar contraseña</ion-label>
+          <ion-input formControlName="confirmacionPassword" type="password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Carrera</ion-label>
+          <ion-input formControlName="carrera"></ion-input>
+        </ion-item>
+        <br>
+        <ion-button (click)="guardar()" color="dark" expand="full" >
+           Registrarse
+        </ion-button>
+      </form> 
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+

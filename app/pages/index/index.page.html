@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" color="medium">
+      <ion-button (click)="mostrarMenu()" >
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title color="dark">Te Llevo!!!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+<br><br><br><br><br><br><br><br>
+<ion-card >
+<ion-card-header>
+  <ion-card-title class="titulo">Como Funsiona?</ion-card-title>
+</ion-card-header>
+      <ion-card-content>
+        <img src="assets/como_viajar.png" class="ion-padding" >
+        <ion-label color="dark">Asi de facil es viajar con nosotros y tu que esperas</ion-label>
+      </ion-card-content>
+    </ion-card>
+
+</ion-content>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="login">
+      <ion-icon name="person-circle-outline"></ion-icon>
+      <ion-label>Inicio de secion</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="registro">
+      <ion-icon name="person-add-outline"></ion-icon>
+      <ion-label>Registro</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

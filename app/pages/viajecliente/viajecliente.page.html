@@ -1,0 +1,30 @@
+<ion-content color="light">
+
+  <img src="assets/maps.jpg" class="ion-padding" class="page-map " >
+  <br><br><br><br><br>
+
+  <ion-card>
+    <ion-item >
+      <ion-icon class="wifi" slot="start" name="cash"></ion-icon>
+      <ion-label>$5000</ion-label>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    </ion-item>
+<br>
+    <ion-item >
+      <ion-icon class="walk" slot="start" name="person-circle"></ion-icon>
+      <ion-label>Juan Garcia</ion-label>
+      <ion-label class="info">Informatico</ion-label>
+    </ion-item>
+ <br>
+    <ion-item >
+      <ion-icon class="warning" slot="start" name="car-sport"></ion-icon>
+      <ion-label>Subaru</ion-label>
+      <ion-label class="info">XXX-531-FF</ion-label>
+    </ion-item>
+  </ion-card>
+<br>
+  <ion-button  (click)="presentAlert()"  color="danger" expand="full" routerLink="/inicio-cliente" >
+    Cancelar viaje
+  </ion-button>
+
+</ion-content>
